@@ -11,7 +11,7 @@ const CURR_SERVER_URL = SERVER_URL;
 const socket: Socket<ServerToClientEvents, ClientToServerEvents> = io(CURR_SERVER_URL);
 
 socket.on('connect', () => {
-  console.log(`connected as ${socket.id}`);
+  console.log(`connected with id = ${socket.id}`);
 });
 
 export {
