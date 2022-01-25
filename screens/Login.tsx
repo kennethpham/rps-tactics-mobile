@@ -1,8 +1,7 @@
-import { useEffect } from 'react';
+import React from 'react';
 import { Text, View } from 'react-native';
 
 import { useSocket } from '../components/SocketContext';
-import { io } from 'socket.io-client';
 
 const Login = () => {
   const userConnection = useSocket();
@@ -10,7 +9,7 @@ const Login = () => {
   return(
     <View>
       <Text>Login Screen</Text>
-      <Text>{'connected to ' + userConnection.socket.id}</Text>
+      <Text>{`connected with id = ${userConnection.socket.id}`}</Text>
     </View>
   );
 }
